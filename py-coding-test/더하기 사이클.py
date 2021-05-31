@@ -1,11 +1,14 @@
 N = int(input())
-newN = -1
+check = N
+temp = 0
+newNum = 0
+count = 0
 
-while newN != N:
-    if (N < 10):
-        strN = '0' + str(N)
-        print(strN)
-    else:
-        strN = str(N)
-    newN = int(strN[0])+int(strN[1])
-    print(newN)
+while True:
+    temp = N//10+N%10
+    newNum = (N%10)*10+temp%10
+    count += 1
+    num = newNum
+    if newNum == check:
+        break
+print(count)
